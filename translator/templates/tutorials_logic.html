@@ -1,0 +1,18 @@
+{% extends 'tutorials.html' %}
+{% load embed_video_tags %}
+
+{% block content %}
+   <div class="mb-5" style="@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap')">
+        <h1 style="color: #fff;
+        font-family: 'Anton', sans-serif;
+        font-weight: 900;">
+        Tutorials
+        </h1>
+   </div>
+   
+   {% for i in videos %}
+        {% video i.url '426x240' %}
+        {{ item.title }}
+    {% endfor %}
+
+{% endblock %}
